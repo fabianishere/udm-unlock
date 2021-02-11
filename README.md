@@ -29,11 +29,12 @@ the build environment:
 sudo apt install gcc-aarch64-linux-gnu
 ```
 
-Now nagivate to the root directory of this repository and export the path to 
-the Linux kernel sources against you wish to build:
+Now navigate to the root directory of this repository, export the path to
+the Linux kernel sources against you wish to build and apply the supplied patch:
 
 ```bash
 export KERNEL=/root/linux
+git -C $KERNEL apply 0001-ubnt-Add-switchable-write-protection-functionality-f.patch
 ```
 Then, build the module using `make`:
 ```bash
